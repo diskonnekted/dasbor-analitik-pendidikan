@@ -7,6 +7,7 @@ import {
   Users, 
   Menu, 
   X, 
+  Globe,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
@@ -29,6 +30,8 @@ export default function DefaultLayout({
         return <BarChart3 className="w-4 h-4 mr-3 text-blue-600" />;
       case "Prediksi Dropout":
         return <Users className="w-4 h-4 mr-3 text-blue-600" />;
+      case "Tentang JDN":
+        return <Globe className="w-4 h-4 mr-3 text-blue-600" />;
       default:
         return <LayoutDashboard className="w-4 h-4 mr-3 text-blue-600" />;
     }

@@ -4,6 +4,7 @@ import OverviewPage from './pages';
 import MapPage from './pages/map';
 import GapPage from './pages/gap';
 import DropoutPage from './pages/dropout';
+import JDNPage from './pages/jdn';
 import { SchoolDataProvider } from './context/SchoolDataContext';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/map" element={<MapPage />} />
           <Route path="/gap" element={<GapPage />} />
           <Route path="/dropout" element={<DropoutPage />} />
+          <Route path="/jdn" element={<JDNPage />} />
         </Routes>
       </DefaultLayout>
     </SchoolDataProvider>

@@ -20,5 +20,9 @@ export const siteConfig = {
       label: "Prediksi Dropout",
       href: "/dropout",
     },
+    {
+      label: "Tentang JDN",
+      href: "/jdn",
+    },
   ],
 };
