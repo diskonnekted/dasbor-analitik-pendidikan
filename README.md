@@ -1,32 +1,60 @@
-# React + TypeScript + Vite
+# Dashboard Analitik Pendidikan Kabupaten Banjarnegara
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Deskripsi Proyek
+Dashboard analitik pendidikan untuk Kabupaten Banjarnegara yang menyajikan visualisasi data statistik pendidikan mulai dari tingkat TK, SD, SMP, SMA, hingga SMK.
 
-Currently, two official plugins are available:
+## Informasi JDN (Jaringan Data Nasional)
+Proyek ini merupakan bagian dari inisiatif **Jaringan Data Nasional (JDN)** untuk mendorong transparansi dan aksesibilitas data pendidikan di Kabupaten Banjarnegara. JDN bertujuan untuk:
+- Menyediakan sumber data yang terintegrasi dan terpercaya
+- Memfasilitasi analisis data untuk pengambilan keputusan berbasis bukti
+- Meningkatkan kolaborasi antara pemerintah, masyarakat, dan pemangku kepentingan
+- Mempercepat transformasi digital di sektor pendidikan
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Fitur yang Sudah Ada
+1. **Overview Statistik**: Ringkasan data pendidikan secara keseluruhan
+2. **Peta Interaktif**: Visualisasi data per kecamatan di peta Banjarnegara
+3. **Analisis Kesenjangan**: Analisis rasio guru-murid dan ketergantungan sekolah swasta
+4. **Prediksi Dropout**: Model analitik untuk memprediksi risiko putus sekolah
 
-## React Compiler
+## Roadmap Pengembangan
+Berikut adalah rencana pengembangan dashboard analitik pendidikan kedepannya:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Phase 1: Peningkatan Kualitas Data (Q3 2026)
+- [ ] Validasi dan cleaning data historis lebih lanjut
+- [ ] Integrasi data tambahan (misal: data ujian nasional, data kesejahteraan guru)
+- [ ] Penambahan filter dan pengelompokan data yang lebih fleksibel
+- [ ] Peningkatan performa loading data
 
-## Expanding the Oxlint configuration
+### Phase 2: Fitur Analisis Lanjutan (Q4 2026)
+- [ ] Analisis tren multi-tahun dengan prediksi
+- [ ] Dashboard perbandingan antar kecamatan dan antar jenjang
+- [ ] Ekspor laporan ke format PDF/Excel
+- [ ] Notifikasi untuk indikator kritis
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### Phase 3: Kolaborasi dan Keterlibatan Masyarakat (Q1 2027)
+- [ ] Fitur komentar dan diskusi publik
+- [ ] Integrasi dengan sistem informasi pendidikan pemerintah daerah
+- [ ] Aksesibilitas untuk pengguna dengan keterbatasan (WCAG 2.1)
+- [ ] Multi-bahasa (Indonesia dan Inggris)
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+### Phase 4: Optimisasi dan Pemeliharaan (Q2 2027)
+- [ ] Pengujian performa dan stabilitas
+- [ ] Dokumentasi API dan developer guide
+- [ ] Program pemeliharaan rutin dan update data
+- [ ] Pengumpulan umpan balik pengguna untuk perbaikan berkelanjutan
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Cara Menjalankan Proyek
+1. Install dependencies: `npm install`
+2. Jalankan server development: `npm run dev`
+3. Akses aplikasi di: `http://localhost:5174`
+
+## Teknologi yang Digunakan
+- React 19 + TypeScript
+- Vite
+- Tailwind CSS
+- Recharts
+- Leaflet (React Leaflet)
+- Hero UI
+
+## Lisensi
+MIT License
