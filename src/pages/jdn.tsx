@@ -1,13 +1,76 @@
-import { Info, ShieldCheck, Globe, Users, TrendingUp, FileText } from "lucide-react";
+import { Info, ShieldCheck, Globe, Users, TrendingUp, FileText, BrainCog, Sparkles, CheckCircle2 } from "lucide-react";
 
 export default function JDNPage() {
+  const roadmapPhases = [
+    {
+      phase: "Phase 1: Peningkatan Kualitas Data (Q3 2026)",
+      items: [
+        "Validasi dan cleaning data historis lebih lanjut",
+        "Integrasi data tambahan (data ujian nasional, data kesejahteraan guru)",
+        "Penambahan filter dan pengelompokan data yang lebih fleksibel",
+        "Peningkatan performa loading data",
+        "Penambahan fitur pencarian data yang lebih canggih"
+      ],
+      color: "text-blue-600",
+      bg: "bg-blue-100"
+    },
+    {
+      phase: "Phase 2: Fitur Analisis Lanjutan (Q4 2026)",
+      items: [
+        "Analisis tren multi-tahun dengan prediksi",
+        "Dashboard perbandingan antar kecamatan dan antar jenjang",
+        "Ekspor laporan ke format PDF/Excel",
+        "Notifikasi untuk indikator kritis",
+        "Dashboard mobile-friendly yang lebih optimal"
+      ],
+      color: "text-green-600",
+      bg: "bg-green-100"
+    },
+    {
+      phase: "Phase 3: AI-Powered Analytics (Q1 2027)",
+      items: [
+        "Analisis prediktif dengan AI untuk risiko dropout yang lebih akurat",
+        "Rekomendasi AI untuk penempatan guru dan sumber daya pendidikan",
+        "Chatbot AI untuk menjawab pertanyaan tentang data pendidikan",
+        "Analisis clustering kecamatan untuk pengelompokan berbasis karakteristik pendidikan",
+        "Deteksi anomali data dengan machine learning"
+      ],
+      color: "text-purple-600",
+      bg: "bg-purple-100"
+    },
+    {
+      phase: "Phase 4: Kolaborasi dan Keterlibatan Masyarakat (Q2 2027)",
+      items: [
+        "Fitur komentar dan diskusi publik",
+        "Integrasi dengan sistem informasi pendidikan pemerintah daerah",
+        "Aksesibilitas untuk pengguna dengan keterbatasan (WCAG 2.1)",
+        "Multi-bahasa (Indonesia dan Inggris)",
+        "Program edukasi penggunaan dashboard untuk masyarakat"
+      ],
+      color: "text-orange-600",
+      bg: "bg-orange-100"
+    },
+    {
+      phase: "Phase 5: Optimisasi dan Pemeliharaan (Q3-Q4 2027)",
+      items: [
+        "Pengujian performa dan stabilitas",
+        "Dokumentasi API dan developer guide",
+        "Program pemeliharaan rutin dan update data",
+        "Pengumpulan umpan balik pengguna untuk perbaikan berkelanjutan",
+        "Penambahan fitur advanced data visualization"
+      ],
+      color: "text-teal-600",
+      bg: "bg-teal-100"
+    }
+  ];
+
   return (
     <div className="flex flex-col gap-6">
       {/* Header Section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b-2 border-[#171717] pb-4">
         <div>
           <h1 className="font-serif font-black text-2xl uppercase tracking-tight text-[#171717]">Tentang JDN</h1>
-          <p className="text-sm text-neutral-600 mt-1">Jaringan Data Nasional untuk Pendidikan</p>
+          <p className="text-sm text-neutral-600 mt-1">Jaringan Data Nasional untuk Pendidikan Kabupaten Banjarnegara</p>
         </div>
       </div>
 
@@ -70,11 +133,11 @@ export default function JDNPage() {
 
         <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
           <div className="flex items-center gap-2 mb-3">
-            <Info className="w-5 h-5 text-red-600" />
-            <h3 className="font-serif font-bold text-lg">Inovasi Digital</h3>
+            <BrainCog className="w-5 h-5 text-purple-600" />
+            <h3 className="font-serif font-bold text-lg">AI Powered</h3>
           </div>
           <p className="text-sm text-neutral-700 font-mono">
-            Mempercepat transformasi digital di sektor pendidikan.
+            Analisis data yang didukung oleh kecerdasan buatan untuk insight yang lebih dalam.
           </p>
         </div>
 
@@ -89,7 +152,7 @@ export default function JDNPage() {
         </div>
       </div>
 
-      {/* Roadmap Section */}
+      {/* Tujuan Section */}
       <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-6">
         <h2 className="font-serif font-bold text-xl mb-4">Tujuan JDN di Kabupaten Banjarnegara</h2>
         <ul className="space-y-3 font-mono text-sm text-neutral-700">
@@ -110,6 +173,29 @@ export default function JDNPage() {
             Mempercepat transformasi digital di sektor pendidikan Kabupaten Banjarnegara
           </li>
         </ul>
+      </div>
+
+      {/* Roadmap Section */}
+      <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-6">
+        <div className="flex items-center gap-2 mb-6">
+          <Sparkles className="w-6 h-6 text-purple-600" />
+          <h2 className="font-serif font-bold text-xl">Roadmap Pengembangan</h2>
+        </div>
+        <div className="space-y-6">
+          {roadmapPhases.map((phase, phaseIndex) => (
+            <div key={phaseIndex} className={`p-5 border-2 border-[#171717] ${phase.bg}`}>
+              <h3 className={`font-serif font-black text-lg mb-3 ${phase.color}`}>{phase.phase}</h3>
+              <ul className="space-y-2">
+                {phase.items.map((item, itemIndex) => (
+                  <li key={itemIndex} className="flex items-start gap-2 font-mono text-sm text-neutral-700">
+                    <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
