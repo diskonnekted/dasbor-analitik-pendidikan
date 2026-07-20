@@ -184,9 +184,9 @@ export default function DropoutPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b-2 border-[#171717] pb-4">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b-2 border-[#141414] pb-4">
         <div>
-          <h1 className="font-serif font-black text-2xl uppercase tracking-tight text-[#171717]">
+          <h1 className="font-serif font-black text-2xl uppercase tracking-tight text-[#141414]">
             Prediksi Dropout
           </h1>
           <p className="text-sm text-neutral-600 mt-1">
@@ -199,7 +199,7 @@ export default function DropoutPage() {
             <select
               value={selectedYear}
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSelectedYear(e.target.value)}
-              className="border-2 border-[#171717] bg-white px-3 py-2 font-mono text-sm"
+              className="border-2 border-[#141414] bg-white px-3 py-2 font-mono text-sm"
             >
               {availableYears.map((yr) => (
                 <option key={yr} value={yr}>
@@ -217,7 +217,7 @@ export default function DropoutPage() {
               value={searchTerm}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value)}
               placeholder="Ketik nama kecamatan..."
-              className="border-2 border-[#171717] bg-white px-3 py-2 font-mono text-sm"
+              className="border-2 border-[#141414] bg-white px-3 py-2 font-mono text-sm"
             />
           </div>
         </div>
@@ -246,7 +246,7 @@ export default function DropoutPage() {
         />
       </div>
 
-      <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+      <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
         <h2 className="font-serif font-bold text-lg mb-4">Indeks Risiko per Kecamatan</h2>
         <div className="h-80">
           <ResponsiveContainer width="100%" height="100%">
@@ -281,27 +281,27 @@ export default function DropoutPage() {
         </div>
       </div>
 
-      <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5 overflow-x-auto">
+      <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5 overflow-x-auto">
         <h2 className="font-serif font-bold text-lg mb-4">Tabel Risiko & Rekomendasi</h2>
         <table className="w-full border-collapse">
           <thead>
             <tr className="bg-blue-50">
-              <th className="border-2 border-[#171717] px-4 py-2 text-left font-mono font-bold text-xs uppercase">
+              <th className="border-2 border-[#141414] px-4 py-2 text-left font-mono font-bold text-xs uppercase">
                 No
               </th>
-              <th className="border-2 border-[#171717] px-4 py-2 text-left font-mono font-bold text-xs uppercase">
+              <th className="border-2 border-[#141414] px-4 py-2 text-left font-mono font-bold text-xs uppercase">
                 Kecamatan
               </th>
-              <th className="border-2 border-[#171717] px-4 py-2 text-right font-mono font-bold text-xs uppercase">
+              <th className="border-2 border-[#141414] px-4 py-2 text-right font-mono font-bold text-xs uppercase">
                 Skor Risiko
               </th>
-              <th className="border-2 border-[#171717] px-4 py-2 text-center font-mono font-bold text-xs uppercase">
+              <th className="border-2 border-[#141414] px-4 py-2 text-center font-mono font-bold text-xs uppercase">
                 Kategori
               </th>
-              <th className="border-2 border-[#171717] px-4 py-2 text-left font-mono font-bold text-xs uppercase">
+              <th className="border-2 border-[#141414] px-4 py-2 text-left font-mono font-bold text-xs uppercase">
                 Pemicu
               </th>
-              <th className="border-2 border-[#171717] px-4 py-2 text-left font-mono font-bold text-xs uppercase">
+              <th className="border-2 border-[#141414] px-4 py-2 text-left font-mono font-bold text-xs uppercase">
                 Rekomendasi
               </th>
             </tr>
@@ -322,29 +322,29 @@ export default function DropoutPage() {
               }
               return (
                 <tr key={row.kecamatan} className="hover:bg-blue-50">
-                  <td className="border-2 border-[#171717] px-4 py-2 font-mono">{index + 1}</td>
-                  <td className="border-2 border-[#171717] px-4 py-2 font-mono font-bold flex items-center gap-2">
+                  <td className="border-2 border-[#141414] px-4 py-2 font-mono">{index + 1}</td>
+                  <td className="border-2 border-[#141414] px-4 py-2 font-mono font-bold flex items-center gap-2">
                     <MapPin className="w-4 h-4 text-neutral-500" />
                     {row.kecamatan}
                   </td>
                   <td
-                    className="border-2 border-[#171717] px-4 py-2 text-right font-mono font-bold text-lg"
+                    className="border-2 border-[#141414] px-4 py-2 text-right font-mono font-bold text-lg"
                     style={{ color: badgeColor }}
                   >
                     {row.compositeScore}%
                   </td>
-                  <td className="border-2 border-[#171717] px-4 py-2 text-center">
+                  <td className="border-2 border-[#141414] px-4 py-2 text-center">
                     <span
-                      className="inline-block px-3 py-1 border-2 border-[#171717] bg-white font-mono font-bold text-xs"
+                      className="inline-block px-3 py-1 border-2 border-[#141414] bg-white font-mono font-bold text-xs"
                       style={{ backgroundColor: badgeBg }}
                     >
                       {badgeLabel}
                     </span>
                   </td>
-                  <td className="border-2 border-[#171717] px-4 py-2 font-mono text-xs text-neutral-700">
+                  <td className="border-2 border-[#141414] px-4 py-2 font-mono text-xs text-neutral-700">
                     {row.mainDriver}
                   </td>
-                  <td className="border-2 border-[#171717] px-4 py-2 font-mono text-xs text-blue-700 font-bold">
+                  <td className="border-2 border-[#141414] px-4 py-2 font-mono text-xs text-blue-700 font-bold">
                     {getRecommendation(row.compositeScore, row.mainDriver)}
                   </td>
                 </tr>

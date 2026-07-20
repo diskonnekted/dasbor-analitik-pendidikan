@@ -117,9 +117,9 @@ export default function OverviewPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b-2 border-[#171717] pb-4">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b-2 border-[#141414] pb-4">
         <div>
-          <h1 className="font-serif font-black text-2xl uppercase tracking-tight text-[#171717]">Overview Statistik</h1>
+          <h1 className="font-serif font-black text-2xl uppercase tracking-tight text-[#141414]">Overview Statistik</h1>
           <p className="text-sm text-neutral-600 mt-1">Visualisasi profil dan data historis pendidikan di Kabupaten Banjarnegara</p>
         </div>
         <div className="flex items-center gap-2">
@@ -127,7 +127,7 @@ export default function OverviewPage() {
           <select
             value={selectedYear}
             onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSelectedYear(e.target.value)}
-            className="border-2 border-[#171717] bg-white px-3 py-2 font-mono text-sm shadow-[2px_2px_0px_0px_#171717]"
+            className="border-2 border-[#141414] bg-white px-3 py-2 font-mono text-sm shadow-hd"
           >
             {availableYears.map((yr) => (
               <option key={yr} value={yr}>{yr}</option>
@@ -157,7 +157,7 @@ export default function OverviewPage() {
 
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+        <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
           <h2 className="font-serif font-bold text-lg mb-4">Tren Historis Siswa</h2>
           <div className="h-64">
             <ResponsiveContainer width="100%" height="100%">
@@ -179,7 +179,7 @@ export default function OverviewPage() {
           </div>
         </div>
 
-        <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+        <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
           <h2 className="font-serif font-bold text-lg mb-4">Distribusi per Jenjang</h2>
           <div className="h-64">
             <ResponsiveContainer width="100%" height="100%">
@@ -197,7 +197,7 @@ export default function OverviewPage() {
       </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+        <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
           <h2 className="font-serif font-bold text-lg mb-4">Proporsi Negeri vs Swasta</h2>
           <div className="h-64">
             <ResponsiveContainer width="100%" height="100%">
@@ -223,17 +223,17 @@ export default function OverviewPage() {
           </div>
         </div>
         
-        <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+        <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
           <h2 className="font-serif font-bold text-lg mb-4">Detail per Jenjang</h2>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-blue-50">
-                  <th className="border-2 border-[#171717] px-4 py-2 text-left font-mono font-bold text-xs uppercase">Jenjang</th>
-                  <th className="border-2 border-[#171717] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Sekolah</th>
-                  <th className="border-2 border-[#171717] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Guru</th>
-                  <th className="border-2 border-[#171717] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Murid</th>
-                  <th className="border-2 border-[#171717] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Rasio</th>
+                  <th className="border-2 border-[#141414] px-4 py-2 text-left font-mono font-bold text-xs uppercase">Jenjang</th>
+                  <th className="border-2 border-[#141414] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Sekolah</th>
+                  <th className="border-2 border-[#141414] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Guru</th>
+                  <th className="border-2 border-[#141414] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Murid</th>
+                  <th className="border-2 border-[#141414] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Rasio</th>
                 </tr>
               </thead>
               <tbody>
@@ -241,11 +241,11 @@ export default function OverviewPage() {
                   const ratio = row.guru > 0 ? (row.murid / row.guru).toFixed(1) : '0';
                   return (
                     <tr key={row.level} className="hover:bg-blue-50">
-                      <td className="border-2 border-[#171717] px-4 py-2 font-mono font-bold">{row.level}</td>
-                      <td className="border-2 border-[#171717] px-4 py-2 text-right font-mono">{row.sekolah.toLocaleString()}</td>
-                      <td className="border-2 border-[#171717] px-4 py-2 text-right font-mono">{row.guru.toLocaleString()}</td>
-                      <td className="border-2 border-[#171717] px-4 py-2 text-right font-mono">{row.murid.toLocaleString()}</td>
-                      <td className="border-2 border-[#171717] px-4 py-2 text-right font-mono font-bold">1 : {ratio}</td>
+                      <td className="border-2 border-[#141414] px-4 py-2 font-mono font-bold">{row.level}</td>
+                      <td className="border-2 border-[#141414] px-4 py-2 text-right font-mono">{row.sekolah.toLocaleString()}</td>
+                      <td className="border-2 border-[#141414] px-4 py-2 text-right font-mono">{row.guru.toLocaleString()}</td>
+                      <td className="border-2 border-[#141414] px-4 py-2 text-right font-mono">{row.murid.toLocaleString()}</td>
+                      <td className="border-2 border-[#141414] px-4 py-2 text-right font-mono font-bold">1 : {ratio}</td>
                     </tr>
                   );
                 })}

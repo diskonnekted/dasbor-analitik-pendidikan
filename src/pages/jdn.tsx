@@ -67,17 +67,17 @@ export default function JDNPage() {
   return (
     <div className="flex flex-col gap-6">
       {/* Header Section */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b-2 border-[#171717] pb-4">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b-2 border-[#141414] pb-4">
         <div>
-          <h1 className="font-serif font-black text-2xl uppercase tracking-tight text-[#171717]">Tentang JDN</h1>
+          <h1 className="font-serif font-black text-2xl uppercase tracking-tight text-[#141414]">Tentang JDN</h1>
           <p className="text-sm text-neutral-600 mt-1">Jaringan Data Nasional untuk Pendidikan Kabupaten Banjarnegara</p>
         </div>
       </div>
 
       {/* JDN Hero Card */}
-      <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-6">
+      <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-6">
         <div className="flex items-start gap-4">
-          <div className="w-12 h-12 border-2 border-[#171717] bg-blue-200 shadow-[2px_2px_0px_0px_#171717] flex items-center justify-center">
+          <div className="w-12 h-12 border-2 border-[#141414] bg-blue-200 shadow-hd flex items-center justify-center">
             <Globe className="w-6 h-6 text-blue-600" />
           </div>
           <div className="flex-1">
@@ -91,7 +91,7 @@ export default function JDNPage() {
 
       {/* Features Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+        <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
           <div className="flex items-center gap-2 mb-3">
             <ShieldCheck className="w-5 h-5 text-green-600" />
             <h3 className="font-serif font-bold text-lg">Transparansi Data</h3>
@@ -101,7 +101,7 @@ export default function JDNPage() {
           </p>
         </div>
 
-        <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+        <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
           <div className="flex items-center gap-2 mb-3">
             <Users className="w-5 h-5 text-blue-600" />
             <h3 className="font-serif font-bold text-lg">Kolaborasi</h3>
@@ -111,7 +111,7 @@ export default function JDNPage() {
           </p>
         </div>
 
-        <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+        <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
           <div className="flex items-center gap-2 mb-3">
             <TrendingUp className="w-5 h-5 text-yellow-600" />
             <h3 className="font-serif font-bold text-lg">Analitik Data</h3>
@@ -121,7 +121,7 @@ export default function JDNPage() {
           </p>
         </div>
 
-        <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+        <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
           <div className="flex items-center gap-2 mb-3">
             <FileText className="w-5 h-5 text-purple-600" />
             <h3 className="font-serif font-bold text-lg">Standarisasi</h3>
@@ -131,7 +131,7 @@ export default function JDNPage() {
           </p>
         </div>
 
-        <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+        <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
           <div className="flex items-center gap-2 mb-3">
             <BrainCog className="w-5 h-5 text-purple-600" />
             <h3 className="font-serif font-bold text-lg">AI Powered</h3>
@@ -141,7 +141,7 @@ export default function JDNPage() {
           </p>
         </div>
 
-        <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+        <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
           <div className="flex items-center gap-2 mb-3">
             <ShieldCheck className="w-5 h-5 text-teal-600" />
             <h3 className="font-serif font-bold text-lg">Keandalan</h3>
@@ -153,37 +153,37 @@ export default function JDNPage() {
       </div>
 
       {/* Tujuan Section */}
-      <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-6">
+      <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-6">
         <h2 className="font-serif font-bold text-xl mb-4">Tujuan JDN di Kabupaten Banjarnegara</h2>
         <ul className="space-y-3 font-mono text-sm text-neutral-700">
           <li className="flex items-start gap-2">
-            <span className="inline-block w-2 h-2 bg-blue-600 border border-[#171717] mt-1.5"></span>
+            <span className="inline-block w-2 h-2 bg-blue-600 border border-[#141414] mt-1.5"></span>
             Menyediakan sumber data pendidikan yang terintegrasi dan terpercaya
           </li>
           <li className="flex items-start gap-2">
-            <span className="inline-block w-2 h-2 bg-blue-600 border border-[#171717] mt-1.5"></span>
+            <span className="inline-block w-2 h-2 bg-blue-600 border border-[#141414] mt-1.5"></span>
             Memfasilitasi analisis data untuk pengambilan keputusan berbasis bukti
           </li>
           <li className="flex items-start gap-2">
-            <span className="inline-block w-2 h-2 bg-blue-600 border border-[#171717] mt-1.5"></span>
+            <span className="inline-block w-2 h-2 bg-blue-600 border border-[#141414] mt-1.5"></span>
             Meningkatkan kolaborasi antara pemerintah, masyarakat, dan pemangku kepentingan
           </li>
           <li className="flex items-start gap-2">
-            <span className="inline-block w-2 h-2 bg-blue-600 border border-[#171717] mt-1.5"></span>
+            <span className="inline-block w-2 h-2 bg-blue-600 border border-[#141414] mt-1.5"></span>
             Mempercepat transformasi digital di sektor pendidikan Kabupaten Banjarnegara
           </li>
         </ul>
       </div>
 
       {/* Roadmap Section */}
-      <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-6">
+      <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-6">
         <div className="flex items-center gap-2 mb-6">
           <Sparkles className="w-6 h-6 text-purple-600" />
           <h2 className="font-serif font-bold text-xl">Roadmap Pengembangan</h2>
         </div>
         <div className="space-y-6">
           {roadmapPhases.map((phase, phaseIndex) => (
-            <div key={phaseIndex} className={`p-5 border-2 border-[#171717] ${phase.bg}`}>
+            <div key={phaseIndex} className={`p-5 border-2 border-[#141414] ${phase.bg}`}>
               <h3 className={`font-serif font-black text-lg mb-3 ${phase.color}`}>{phase.phase}</h3>
               <ul className="space-y-2">
                 {phase.items.map((item, itemIndex) => (

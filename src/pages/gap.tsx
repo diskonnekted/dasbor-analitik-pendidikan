@@ -119,9 +119,9 @@ export default function GapPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b-2 border-[#171717] pb-4">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b-2 border-[#141414] pb-4">
         <div>
-          <h1 className="font-serif font-black text-2xl uppercase tracking-tight text-[#171717]">Analisis Kesenjangan</h1>
+          <h1 className="font-serif font-black text-2xl uppercase tracking-tight text-[#141414]">Analisis Kesenjangan</h1>
           <p className="text-sm text-neutral-600 mt-1">Analisis ketimpangan rasio guru-murid dan ketergantungan sekolah swasta</p>
         </div>
         <div className="flex gap-4">
@@ -130,7 +130,7 @@ export default function GapPage() {
             <select
               value={selectedYear}
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSelectedYear(e.target.value)}
-              className="border-2 border-[#171717] bg-white px-3 py-2 font-mono text-sm"
+              className="border-2 border-[#141414] bg-white px-3 py-2 font-mono text-sm"
             >
               {availableYears.map((yr) => (
                 <option key={yr} value={yr}>{yr}</option>
@@ -142,7 +142,7 @@ export default function GapPage() {
             <select
               value={selectedLevel}
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSelectedLevel(e.target.value)}
-              className="border-2 border-[#171717] bg-white px-3 py-2 font-mono text-sm"
+              className="border-2 border-[#141414] bg-white px-3 py-2 font-mono text-sm"
             >
               <option value="TK">TK</option>
               <option value="SD">SD</option>
@@ -172,7 +172,7 @@ export default function GapPage() {
         />
       </div>
 
-      <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+      <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
         <h2 className="font-serif font-bold text-lg mb-4">Rasio Guru-Murid per Kecamatan</h2>
         <div className="h-80">
           <ResponsiveContainer width="100%" height="100%">
@@ -208,7 +208,7 @@ export default function GapPage() {
         </div>
       </div>
 
-      <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+      <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
         <h2 className="font-serif font-bold text-lg mb-4">Proporsi Negeri vs Swasta</h2>
         <div className="h-80">
           <ResponsiveContainer width="100%" height="100%">
@@ -235,19 +235,19 @@ export default function GapPage() {
         </div>
       </div>
 
-      <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5 overflow-x-auto">
+      <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5 overflow-x-auto">
         <h2 className="font-serif font-bold text-lg mb-4">Tabel Detail</h2>
         <table className="w-full border-collapse">
           <thead>
             <tr className="bg-blue-50">
-              <th className="border-2 border-[#171717] px-4 py-2 text-left font-mono font-bold text-xs uppercase">No</th>
-              <th className="border-2 border-[#171717] px-4 py-2 text-left font-mono font-bold text-xs uppercase">Kecamatan</th>
-              <th className="border-2 border-[#171717] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Sekolah</th>
-              <th className="border-2 border-[#171717] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Guru</th>
-              <th className="border-2 border-[#171717] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Murid</th>
-              <th className="border-2 border-[#171717] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Rasio</th>
-              <th className="border-2 border-[#171717] px-4 py-2 text-right font-mono font-bold text-xs uppercase">% Swasta</th>
-              <th className="border-2 border-[#171717] px-4 py-2 text-center font-mono font-bold text-xs uppercase">Status</th>
+              <th className="border-2 border-[#141414] px-4 py-2 text-left font-mono font-bold text-xs uppercase">No</th>
+              <th className="border-2 border-[#141414] px-4 py-2 text-left font-mono font-bold text-xs uppercase">Kecamatan</th>
+              <th className="border-2 border-[#141414] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Sekolah</th>
+              <th className="border-2 border-[#141414] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Guru</th>
+              <th className="border-2 border-[#141414] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Murid</th>
+              <th className="border-2 border-[#141414] px-4 py-2 text-right font-mono font-bold text-xs uppercase">Rasio</th>
+              <th className="border-2 border-[#141414] px-4 py-2 text-right font-mono font-bold text-xs uppercase">% Swasta</th>
+              <th className="border-2 border-[#141414] px-4 py-2 text-center font-mono font-bold text-xs uppercase">Status</th>
             </tr>
           </thead>
           <tbody>
@@ -267,33 +267,33 @@ export default function GapPage() {
               }
               return (
                 <tr key={row.kecamatan} className="hover:bg-blue-50">
-                  <td className="border-2 border-[#171717] px-4 py-2 font-mono">{index + 1}</td>
-                  <td className="border-2 border-[#171717] px-4 py-2 font-mono font-bold">{row.kecamatan}</td>
-                  <td className="border-2 border-[#171717] px-4 py-2 text-right font-mono">
+                  <td className="border-2 border-[#141414] px-4 py-2 font-mono">{index + 1}</td>
+                  <td className="border-2 border-[#141414] px-4 py-2 font-mono font-bold">{row.kecamatan}</td>
+                  <td className="border-2 border-[#141414] px-4 py-2 text-right font-mono">
                     {row.totalSekolah}
                     <span className="text-neutral-500 text-xs ml-1">
                       ({row.sekolah_negeri}/{row.sekolah_swasta})
                     </span>
                   </td>
-                  <td className="border-2 border-[#171717] px-4 py-2 text-right font-mono">
+                  <td className="border-2 border-[#141414] px-4 py-2 text-right font-mono">
                     {row.totalGuru.toLocaleString()}
                     <span className="text-neutral-500 text-xs ml-1">
                       ({row.guru_negeri}/{row.guru_swasta})
                     </span>
                   </td>
-                  <td className="border-2 border-[#171717] px-4 py-2 text-right font-mono">
+                  <td className="border-2 border-[#141414] px-4 py-2 text-right font-mono">
                     {row.totalMurid.toLocaleString()}
                     <span className="text-neutral-500 text-xs ml-1">
                       ({row.murid_negeri}/{row.murid_swasta})
                     </span>
                   </td>
-                  <td className="border-2 border-[#171717] px-4 py-2 text-right font-mono font-bold" style={{ color: statusColor === 'text-red-600' ? '#e53e3e' : 'inherit' }}>
+                  <td className="border-2 border-[#141414] px-4 py-2 text-right font-mono font-bold" style={{ color: statusColor === 'text-red-600' ? '#e53e3e' : 'inherit' }}>
                     1 : {ratio}
                   </td>
-                  <td className="border-2 border-[#171717] px-4 py-2 text-right font-mono">
+                  <td className="border-2 border-[#141414] px-4 py-2 text-right font-mono">
                     {row.swastaPercentage}%
                   </td>
-                  <td className="border-2 border-[#171717] px-4 py-2 text-center font-mono font-bold" style={{ color: statusColor.replace('text-', '') === 'red-600' ? '#e53e3e' : statusColor.replace('text-', '') === 'orange-600' ? '#dd6b20' : statusColor.replace('text-', '') === 'blue-600' ? '#3182ce' : '#38a169' }}>
+                  <td className="border-2 border-[#141414] px-4 py-2 text-center font-mono font-bold" style={{ color: statusColor.replace('text-', '') === 'red-600' ? '#e53e3e' : statusColor.replace('text-', '') === 'orange-600' ? '#dd6b20' : statusColor.replace('text-', '') === 'blue-600' ? '#3182ce' : '#38a169' }}>
                     {statusLabel}
                   </td>
                 </tr>

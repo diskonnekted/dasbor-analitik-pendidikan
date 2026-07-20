@@ -181,7 +181,7 @@ export default function MapPage() {
 
   return (
     <div className="flex flex-col md:flex-row gap-6 h-[calc(100vh-200px)]">
-      <div className="w-full md:w-80 bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5 flex flex-col gap-4 overflow-y-auto">
+      <div className="w-full md:w-80 bg-white border-2 border-[#141414] shadow-hd-lg p-5 flex flex-col gap-4 overflow-y-auto">
         <div>
           <h2 className="font-serif font-black text-xl uppercase mb-2">Pengaturan Peta</h2>
         </div>
@@ -191,7 +191,7 @@ export default function MapPage() {
             <select
               value={selectedLevel}
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSelectedLevel(e.target.value)}
-              className="w-full border-2 border-[#171717] bg-white px-3 py-2 font-mono text-sm"
+              className="w-full border-2 border-[#141414] bg-white px-3 py-2 font-mono text-sm"
             >
               <option value="TK">TK</option>
               <option value="SD">SD</option>
@@ -205,7 +205,7 @@ export default function MapPage() {
             <select
               value={selectedYear}
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSelectedYear(e.target.value)}
-              className="w-full border-2 border-[#171717] bg-white px-3 py-2 font-mono text-sm"
+              className="w-full border-2 border-[#141414] bg-white px-3 py-2 font-mono text-sm"
             >
               {availableYears.map(y => (
                 <option key={y} value={y}>{y}</option>
@@ -217,7 +217,7 @@ export default function MapPage() {
             <select
               value={selectedMetric}
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSelectedMetric(e.target.value)}
-              className="w-full border-2 border-[#171717] bg-white px-3 py-2 font-mono text-sm"
+              className="w-full border-2 border-[#141414] bg-white px-3 py-2 font-mono text-sm"
             >
               <option value="murid">Total Murid</option>
               <option value="guru">Total Guru</option>
@@ -228,7 +228,7 @@ export default function MapPage() {
         </div>
 
         {selectedKecDetail ? (
-          <div className="border-2 border-[#171717] p-4">
+          <div className="border-2 border-[#141414] p-4">
             <h3 className="font-serif font-bold text-lg mb-2">{selectedKecDetail.rawName}</h3>
             <div className="grid grid-cols-2 gap-2">
               <div>
@@ -344,7 +344,7 @@ export default function MapPage() {
         </div>
       </div>
 
-      <div className="flex-1 border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] overflow-hidden">
+      <div className="flex-1 border-2 border-[#141414] shadow-hd-lg overflow-hidden">
         <MapContainer
           center={[-7.3941, 109.6961]}
           zoom={11}
@@ -366,7 +366,7 @@ export default function MapPage() {
                 fillColor: color,
                 weight: 2,
                 opacity: 1,
-                color: '#171717',
+                color: '#141414',
                 dashArray: '3',
                 fillOpacity: 0.7,
               };

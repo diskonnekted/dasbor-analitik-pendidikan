@@ -138,9 +138,9 @@ export default function LiteracyPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b-2 border-[#171717] pb-4">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b-2 border-[#141414] pb-4">
         <div>
-          <h1 className="font-serif font-black text-2xl uppercase tracking-tight text-[#171717]">Analisis Literasi</h1>
+          <h1 className="font-serif font-black text-2xl uppercase tracking-tight text-[#141414]">Analisis Literasi</h1>
           <p className="text-sm text-neutral-600 mt-1">Aktivitas perpustakaan daerah sebagai indikator literasi (Sumber: DISARPUS)</p>
         </div>
         <div className="flex items-center gap-2">
@@ -148,7 +148,7 @@ export default function LiteracyPage() {
           <select
             value={selectedYear}
             onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSelectedYear(e.target.value)}
-            className="border-2 border-[#171717] bg-white px-3 py-2 font-mono text-sm shadow-[2px_2px_0px_0px_#171717]"
+            className="border-2 border-[#141414] bg-white px-3 py-2 font-mono text-sm shadow-hd"
           >
             {availableYears.map((yr) => (
               <option key={yr} value={yr}>{yr}</option>
@@ -178,7 +178,7 @@ export default function LiteracyPage() {
 
       {/* Charts row 1 */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+        <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
           <h2 className="font-serif font-bold text-lg mb-4">Tren Bulanan {selectedYear}</h2>
           <div className="h-64">
             <ResponsiveContainer width="100%" height="100%">
@@ -205,7 +205,7 @@ export default function LiteracyPage() {
           </div>
         </div>
 
-        <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+        <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
           <h2 className="font-serif font-bold text-lg mb-4">Komposisi Pengunjung {selectedYear}</h2>
           <div className="h-64">
             <ResponsiveContainer width="100%" height="100%">
@@ -232,7 +232,7 @@ export default function LiteracyPage() {
 
       {/* Charts row 2 */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+        <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
           <h2 className="font-serif font-bold text-lg mb-4">Tren Tahunan Kunjungan & Anggota Baru</h2>
           <div className="h-72">
             <ResponsiveContainer width="100%" height="100%">
@@ -249,7 +249,7 @@ export default function LiteracyPage() {
           </div>
         </div>
 
-        <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+        <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
           <h2 className="font-serif font-bold text-lg mb-4">Kategori Koleksi Dipinjam {selectedYear}</h2>
           <div className="h-72">
             <ResponsiveContainer width="100%" height="100%">
@@ -274,7 +274,7 @@ export default function LiteracyPage() {
       </div>
 
       {/* Insight footer */}
-      <div className="bg-white border-2 border-[#171717] shadow-[4px_4px_0px_0px_#171717] p-5">
+      <div className="bg-white border-2 border-[#141414] shadow-hd-lg p-5">
         <div className="flex items-center gap-2 mb-3">
           <Library className="w-5 h-5 text-blue-600" />
           <h2 className="font-serif font-bold text-lg">Insight Literasi</h2>
