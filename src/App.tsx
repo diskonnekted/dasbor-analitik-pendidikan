@@ -5,20 +5,25 @@ import MapPage from './pages/map';
 import GapPage from './pages/gap';
 import DropoutPage from './pages/dropout';
 import JDNPage from './pages/jdn';
+import LiteracyPage from './pages/literacy';
 import { SchoolDataProvider } from './context/SchoolDataContext';
+import { LibraryDataProvider } from './context/LibraryDataContext';
 
 function App() {
   return (
     <SchoolDataProvider>
-      <DefaultLayout>
-        <Routes>
-          <Route path="/" element={<OverviewPage />} />
-          <Route path="/map" element={<MapPage />} />
-          <Route path="/gap" element={<GapPage />} />
-          <Route path="/dropout" element={<DropoutPage />} />
-          <Route path="/jdn" element={<JDNPage />} />
-        </Routes>
-      </DefaultLayout>
+      <LibraryDataProvider>
+        <DefaultLayout>
+          <Routes>
+            <Route path="/" element={<OverviewPage />} />
+            <Route path="/map" element={<MapPage />} />
+            <Route path="/gap" element={<GapPage />} />
+            <Route path="/dropout" element={<DropoutPage />} />
+            <Route path="/literacy" element={<LiteracyPage />} />
+            <Route path="/jdn" element={<JDNPage />} />
+          </Routes>
+        </DefaultLayout>
+      </LibraryDataProvider>
     </SchoolDataProvider>
   );
 }

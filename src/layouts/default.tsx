@@ -8,6 +8,7 @@ import {
   Menu, 
   X, 
   Globe,
+  BookOpen,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
@@ -30,6 +31,8 @@ export default function DefaultLayout({
         return <BarChart3 className="w-4 h-4 mr-3 text-blue-600" />;
       case "Prediksi Dropout":
         return <Users className="w-4 h-4 mr-3 text-blue-600" />;
+      case "Analisis Literasi":
+        return <BookOpen className="w-4 h-4 mr-3 text-blue-600" />;
       case "Tentang JDN":
         return <Globe className="w-4 h-4 mr-3 text-blue-600" />;
       default:

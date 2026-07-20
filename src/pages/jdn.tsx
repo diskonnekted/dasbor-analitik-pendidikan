@@ -1,4 +1,4 @@
-import { Info, ShieldCheck, Globe, Users, TrendingUp, FileText, BrainCog, Sparkles, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, Globe, Users, TrendingUp, FileText, BrainCog, Sparkles, CheckCircle2 } from "lucide-react";
 
 export default function JDNPage() {
   const roadmapPhases = [
